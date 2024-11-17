@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<app-header></app-header>
+
+<body>
+
+    <div class="container">
+        <header>Instituto Superior Tecnológico de Turismo y Patrimonio</header>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" style="height: 460px;">
+            <span class="title">Registro de Lista</span>
+
+            <div class="form first">
+                <div class="detalle__lista">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre de la Lista</label>
+                            <input type="text" formControlName="nombre">
+                            <small *ngIf="form.controls['nombre'].errors && form.controls['nombre'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Número de la Lista</label>
+                            <input type="number" formControlName="nro_lista">
+                            <small *ngIf="form.controls['nro_lista'].errors && form.controls['nro_lista'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Eslogan de la Lista</label>
+                            <input type="text" formControlName="slogan">
+                            <small *ngIf="form.controls['slogan'].errors && form.controls['slogan'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Prouesta de la Lista</label>
+                            <input type="text" formControlName="propuesta">
+                            <small *ngIf="form.controls['propuesta'].errors && form.controls['propuesta'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Logo de la Lista</label>
+                            <input type="file" id="file-upload" accept="image/*" formControlName="logo"
+                                (change)="onFile($event)">
+                            <small *ngIf="form.controls['logo'].errors && form.controls['logo'].touched">
+                                El campo debe ser Completado
+                            </small>
+                            <div *ngIf="pre">
+                                <img width="100px" [src]="pre">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Siguiente</button>
+            </div>
+        </form>
+
+
+
+        <div class="container-p">
+            <div class="left">
+                <button class="button-p" routerLink="/login">
+                    <span class="image-container">
+                        <img src="./assets/back.png" alt="Imagen" class="image-p">
+                    </span>
+                    <span class="text">Volver al Inicio</span>
+                </button>
+            </div>
+            <p>Artículo 11 del reglamento de elecciones del IST Yavirac.
+                De las candidaturas. - Una vez efectuada la convocatoria a elecciones, el Secretario del Consejo
+                Electoral receptará las candidaturas de los postulantes, dentro del plazo establecido en el cronograma
+                de acuerdo a la ficha de inscripción que determine el Consejo Electoral.
+
+                Las candidaturas deberán presentarse en lista, respetando la equidad de género, igualdad de
+                oportunidades y equidad de conformidad a lo establecido en la Constitución de la República y en la Ley
+                Orgánica de Educación Superior.</p>
+        </div>
+    </div>
+    <div class="button-container">
+        <a [href]="archivoUrl" download="Reglamento">
+            <button class="image-button">
+                <span>Descargar
+                    <br>Reglamento</span>
+                <img src="./assets/download.png" alt="Imagen Botón 1">
+            </button></a>
+        <button class="image-button">
+            <span>Descargar
+                <br>Ficha</span>
+            <img src="./assets/download.png" alt="Imagen Botón 2">
+        </button>
+        <button class="image-button">
+            <span>Descargar
+                <br>Requisitos</span>
+            <img src="./assets/download.png" alt="Imagen Botón 3">
+        </button>
+        <button class="image-button">
+            <span>Adjuntar
+                <br>Requisitos</span>
+            <img src="./assets/attach.png" alt="Imagen Botón 4">
+        </button>
+    </div>
+
+
+</body>
+
+</html>

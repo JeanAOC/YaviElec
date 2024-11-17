@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-menu></app-menu>
+    <div class="container">
+        <h1 class="perfil">Observaciones Lista</h1>
+        <div class="container-p">
+                <button class="button-p" routerLink="/info-candidato">
+                    <span class="image-container">
+                      <img src="./assets/back.png" alt="Imagen" class="image-p">
+                    </span>
+                    <span class="text">Volver atras</span>
+                  </button>
+            
+        </div>
+        <div class="contenedor-logo">
+            <h2>{{item.nombre}}</h2>
+            <div>Lista # {{item.nro_lista}}</div>
+            <div>Estado</div>
+            <select>
+                <option>{{item.estado}}</option>
+                <option>Aceptado</option>
+                <option>Negado</option>
+            </select>
+            <input type="text" placeholder="" value="{{item.estado}}">
+            <div>Observaciones</div>
+            <textarea class="input-s"></textarea>
+            <button class="observaciones-b">
+                <span>Guardar Estado de lista</span>
+            </button>
+            <button class="observaciones-b">
+                <span>Imprimir Informe</span>
+            </button>
+            <button class="observaciones-b">
+                <span>Enviar Correo Electrónico</span>
+            </button>
+        </div>
+        <div class="contenedor-2">
+            <img src="https://pbs.twimg.com/profile_images/953015820669636609/9cv2czeD_400x400.jpg" alt="" class="logo-lista">
+        </div>
+        
+    </div>
+</body>
+</html>

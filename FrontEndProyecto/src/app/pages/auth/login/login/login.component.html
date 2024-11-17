@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="image-container">
+                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/21/ballot-1294935_960_720.png" alt="">
+            </div>
+            <div class="form-container">
+                <h2><b>Inicio de Sesión</b></h2>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="p-fluid">
+
+                    <label> Correo:</label>
+                    <div class="input-group mb-3">
+                        <input type="email" formControlName="correo" name="correo" class="form-control"
+                            class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Ingrese su correo">
+                    </div>
+                    <small id="colorAlert"
+                        *ngIf="loginForm.controls['correo'].errors && loginForm.controls['correo'].touched">
+                        El Campo es Requerido
+                    </small>
+
+                    <label>Contraseña:</label>
+                    <div class="input-group mb-3">
+                        <input type="password" formControlName="clave" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <small id="colorAlert"
+                        *ngIf="loginForm.controls['clave'].errors && loginForm.controls['clave'].touched">
+                        El Campo es Requerido
+                    </small>
+
+                    <!-- <label>Seleccione su Rol:</label>
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>[select]</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Candidato</option>
+                            <option value="3">Votante</option>
+                        </select> -->
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </div>
+
+                    <footer class="footer">
+                        <a href="/resetearContraseña">¿Olvidó su Contraseña?</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

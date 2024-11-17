@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<app-header></app-header>
+
+<body>
+
+    <div class="container">
+        <header>Instituto Superior Tecnológico de Turismo y Patrimonio</header>
+
+        <form [formGroup]="formUser" (ngSubmit)="onSubmit()" style="height: 460px;">
+            <div class="formUser first">
+                <div class="details personal">
+                    <span class="title">Agregar Usuario</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Cedula:</label>
+                            <p-inputNumber inputId="cedula" formControlName="cedula" [showButtons]="false"
+                                [min]="0" [step]="5"></p-inputNumber>
+                            <small *ngIf="formUser.controls['cedula'].errors && formUser.controls['cedula'].touched">
+                                El campo debe ser Completado
+                            </small>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nombre:</label>
+                            <input type="text" formControlName="nombre">
+                            <small *ngIf="formUser.controls['nombre'].errors && formUser.controls['nombre'].touched">
+                                El campo debe ser Completado
+                            </small>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Apellido:</label>
+                            <input type="text" formControlName="apellido">
+                            <small *ngIf="formUser.controls['apellido'].errors && formUser.controls['apellido'].touched">
+                                El campo debe ser Completado
+                            </small>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Correo:</label>
+                            <input type="email" formControlName="correo">
+                            <small *ngIf="formUser.controls['correo'].errors && formUser.controls['correo'].touched">
+                                El campo debe ser Completado
+                            </small>
+
+                        </div>
+
+                        <div class="input-field">
+                            <label>Carrera:</label>
+                            <input type="text" formControlName="carrera">
+                            <small *ngIf="formUser.controls['carrera'].errors && formUser.controls['carrera'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+                        <div class="input-field">
+                            <label>Semestre:</label>
+                            <input type="text" formControlName="semestre">
+                            <small *ngIf="formUser.controls['semestre'].errors && formUser.controls['semestre'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+                        <div class="input-field">
+                            <label>Clave:</label>
+                            <input type="text" formControlName="clave">
+                            <small *ngIf="formUser.controls['clave'].errors && formUser.controls['clave'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+                        <div class="input-field">
+                            <label>Roles:</label>
+                            <input type="text" formControlName="roles">
+                            <small *ngIf="formUser.controls['roles'].errors && formUser.controls['roles'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+                        <div class="input-field">
+                            <label>Estado:</label>
+                            <input type="text" formControlName="estado">
+                            <small *ngIf="formUser.controls['estado'].errors && formUser.controls['estado'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+                        <div class="input-field">
+                            <label>Estado Voto:</label>
+                            <input type="text" formControlName="estadoVoto">
+                            <small *ngIf="formUser.controls['estadoVoto'].errors && formUser.controls['estadoVoto'].touched">
+                                El campo debe ser Completado
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+                <button  class="btn btn-success">Agregar Usuario</button>
+                <button  pButton type="button" class="p-button-warning" label="Actualizar" (click)="updateUsuario()">Actualizar</button>
+            </div>
+        </form>
+        {{formUser.value | json}}
+    </div>
+
+
+
+</body>
+
+</html>

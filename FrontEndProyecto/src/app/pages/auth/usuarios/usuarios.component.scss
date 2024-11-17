@@ -1,0 +1,50 @@
+.container{
+    margin-left: 200px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #362FD9;
+  }
+
+span{
+    color: white;
+}
+
+.image-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .image-button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .button-container {
+    display: flex;
+  }
+
+  .button-container button {
+    margin-right: 10px;
+    margin-bottom: 12px;
+  }
+
+  .search{
+    margin-left: auto;
+  }
+
+  .buttons-orden{
+    display: flex;
+    align-items: center;
+  }

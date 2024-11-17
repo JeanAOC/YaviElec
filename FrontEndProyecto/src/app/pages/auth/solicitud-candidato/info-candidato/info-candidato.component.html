@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-menu></app-menu>
+    <div class="container">
+        <h1 class="perfil">Perfil del Candidato</h1>
+        <div class="container-p">
+                <button class="button-p" routerLink="/solicitud">
+                    <span class="image-container">
+                      <img src="./assets/back.png" alt="Imagen" class="image-p">
+                    </span>
+                    <span class="text">Volver atras</span>
+                  </button>
+        </div>
+        <div class="contenedor-logo">
+            <div class="logo-lista">{{item.logo}}</div>
+            <div class="texto">LISTA #{{item.nro_lista}}</div>
+            <div class="texto">{{item.nombre}}</div>
+        </div>
+        <div class="contenedor-2">
+            <h1>Información</h1>
+            <h2>Detalle del Candidato</h2>
+            <p>Nombres y Apellidos del Presidente: {{ item.datosPresiNombre }}</p>
+            <p>Correo del Presidente: {{ item.datosPresiCorreo }}</p>
+            <p>Nombres y Apellidos del Vicepresidente: {{ item.datosViceNombre }}</p>
+            <p>Correo del Vicepresidente: {{ item.datosViceCorreo }}</p>
+            <p>Nombres y Apellidos del Secretario: {{ item.datosSecretarioNombre }}</p>
+            <p>Correo del Secretario: {{ item.datosSecretarioCorreo }}</p>
+            <p>Nombres y Apellidos del Tesorero: {{ item.datosTesoreroNombre }}</p>
+            <p>Correo del Tesorero: {{ item.datosTesoreroCorreo }}</p>
+            <p>Nombres y Apellidos del Vocal 1: {{ item.datosVocal1Nombre }}</p>
+            <p>Correo del Vocal 1: {{ item.datosVocal1Correo }}</p>
+            <p>Nombres y Apellidos del Vocal 2: {{ item.datosVocal2Nombre }}</p>
+            <p>Correo del Vocal 2: {{ item.datosVocal2Correo }}</p>
+            <p>Nombres y Apellidos del Vocal 3: {{ item.datosVocal3Nombre }}</p>
+            <p>Correo del Vocal 3: {{ item.datosVocal3Correo }}</p>
+            <p>Propuesta</p>
+            <p>{{ item.propuesta }}</p>   
+            <button routerLink="/observaciones">Observaciones</button>
+        </div>
+    </div>
+</body>
+</html>

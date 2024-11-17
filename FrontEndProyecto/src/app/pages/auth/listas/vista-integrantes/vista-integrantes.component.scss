@@ -1,0 +1,36 @@
+#propuesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas con el mismo ancho */
+    grid-gap: 0px; /* Espacio entre los elementos */
+    height: 100vh; /* Altura del contenedor principal */
+  }
+  
+  .left-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .right-button {
+    margin-left: 10px; /* Ajusta el margen izquierdo si deseas agregar espacio entre el botón y el contenido */
+  }

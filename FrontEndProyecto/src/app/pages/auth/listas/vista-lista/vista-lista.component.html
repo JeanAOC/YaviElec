@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<div class="container">
+    <h3 class="text-center"> <b> Elecciones </b> </h3>
+    <h4 class="text-center">Periodo 2023</h4>
+    <div class="alert alert-primary" role="alert">
+        <h4 class="text-center">Se Elige una (1) lista</h4>
+    </div>
+</div>
+<div>
+
+</div>
+
+<div class="container" >
+    <div class="row" >
+        <div class="col-sm-4" *ngFor="let lista of candidatos">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title" class="text-center">{{lista.nombre}}</h4>
+                    <p class="card-text">
+                        {{lista.propuesta}}
+                    </p>
+                    <button class="btn btn-dark" (click)="clickVerCandidatos()">Ver Lista</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+</div>
