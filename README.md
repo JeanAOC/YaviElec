@@ -9,7 +9,6 @@ El sistema cuenta con una interfaz intuitiva y un diseño responsivo, creado con
 ### Funcionalidades Principales
 - Gestión de usuarios con roles (administrador, votantes).
 - Creación y configuración de procesos de votación.
-- Visualización en tiempo real de resultados.
 - Exportación de resultados una vez finalizada la votación.
 
 ---
@@ -36,6 +35,31 @@ El BackEnd fue implementado con **NestJS**, aprovechando su arquitectura modular
 ![NestJS](https://img.icons8.com/color/48/000000/nestjs.png)
 
 ---
+
+## Capturas de Pantalla
+
+### Pantallas Principales
+
+#### Inicio de Sesión
+![Inicio de Sesión](https://i.imgur.com/UpAovkj.png)
+
+#### Recuperar Contraseña
+![Recuperar Contraseña](https://i.imgur.com/hVkLHpq.png)
+
+#### Registrar Candidatos
+![Registrar Candidatos](https://i.imgur.com/rvtauOG.png)
+
+#### Solicitudes de Candidatos
+![Solicitudes de Candidatos](https://i.imgur.com/Gvp3O7s.png)
+
+#### Elegir Candidatos
+![Elegir Candidatos](https://i.imgur.com/R0TDcDp.png)
+
+#### Ver los Miembros de la Lista
+![Ver los Miembros de la Lista](https://i.imgur.com/Yh4awgM.png)
+
+#### Ver Perfil del Candidato
+![Ver Perfil del Candidato](https://i.imgur.com/uGh7C2U.png)
 
 ## Experiencia de Desarrollo
 
